@@ -89,7 +89,9 @@ const styles = StyleSheet.create({
     paddingTop: 2,
     shadowRadius: 1,
     backgroundColor: 'red',
-    position: 'absolute'
+    position: 'absolute',
+    borderWidth: 1,
+    borderColor: 'white'
   },
   actionButtonShadow: {
     shadowOpacity: 0.3,

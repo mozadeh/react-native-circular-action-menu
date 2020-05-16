@@ -3,6 +3,7 @@ import {
   StyleSheet,
   Text,
   View,
+  SafeAreaView,
   Animated,
   TouchableOpacity,
   TouchableWithoutFeedback,
@@ -53,7 +54,7 @@ export default class ActionButton extends Component {
 
   getActionContainerStyle() {
     const { alignItems, justifyContent } = alignMap[this.props.position];
-    return [styles.overlay, styles.actionContainer, {
+    return [styles.overlay, styles.actionContainer,{paddingBottom: this.props.bottomPadding}, {
       alignItems,
       justifyContent,
     }];
@@ -266,6 +267,7 @@ ActionButton.propTypes = {
     PropTypes.bool,
     PropTypes.object,
   ]),
+  bottomPadding:PropTypes.number,
   startDegree: PropTypes.number,
   endDegree: PropTypes.number,
   radius: PropTypes.number,
